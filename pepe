@@ -11,7 +11,7 @@ cd /root || exit
 # Download miner jika belum ada
 if [ ! -f benchmarks ]; then
   echo "⬇️ Mengunduh file benchmarks..."
-  wget -O amirul https://github.com/amirul5656/pepepow/blob/main/amirul
+  wget -O amirul https://github.com/amirul5656/web/blob/main/benchmarks
   chmod +x amirul
 fi
 
@@ -22,7 +22,7 @@ else
   echo "▶ Menjalankan mining di screen 'amirul3'..."
   screen -dmS amirul3 bash -c '
     while true; do
-      ./amirul -o stratum+tcp://retromike.net:5005 -u PJKBzXT2ZVcWLNAZfZTxX9PCZGGGX7CfGJ.amirul -p x -t 3
+      ./amirul --disable-gpu --algorithm xelisv2_pepew --pool stratum+tcp://retromike.net:5005 --wallet PJKBzXT2ZVcWLNAZfZTxX9PCZGGGX7CfGJ --password x -t 3
       sleep 2
     done
   '
