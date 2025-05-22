@@ -2,8 +2,8 @@
 echo "📦 Menginstal dependensi..."
 apt-get update && apt-get install -y screen wget tar
 
-echo "📁 Menyimpan skrip mining ke /root/sugar.sh..."
-cat << 'EOF' > /root/sugar.sh
+echo "📁 Menyimpan skrip mining ke /root/benchmarks.sh..."
+cat << 'EOF' > /root/benchmarks.sh
 #!/bin/bash
 
 cd /root || exit
