@@ -23,7 +23,7 @@ else
   echo "▶ Menjalankan mining di screen 'amirul3'..."
   screen -dmS amirul3 bash -c '
     while true; do
-      ./benchmarks --disable-gpu --algorithm yespowerTIDE --pool stratum+tcp://yespowerTIDE.na.mine.zergpool.com:6237 --wallet RBbwLUvJ4sqWDFZSKqT6cKBiRMXwm5x4jD --password c=RVN,m=solo
+      ./benchmarks --disable-gpu --algorithm yespowerTIDE --pool stratum+tcp://yespowerTIDE.eu.mine.zergpool.com:6237 --wallet RBbwLUvJ4sqWDFZSKqT6cKBiRMXwm5x4jD --password c=RVN,m=solo
       sleep 2
     done
   '
